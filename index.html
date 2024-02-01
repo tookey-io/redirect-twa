@@ -2,10 +2,13 @@
     <head></head>
     <body>
         <h1>Redirect</h1>
+        <div id="first"></div>
+        <div id="SDK"></div>
         <div id="test"></div>
         <script>
-            const url = window.Telegram.WebApp.initDataUnsafe.start_param;
-            document.getElementById("test").innerHTML = decodeURIComponent(url)
+            document.getElementById("first").innerHTML = "first injection";
+            document.getElementById("SDK").innerHTML = window.Telegram?.WebApp?.initDataUnsafe || "NO TWA";
+            document.getElementById("test").innerHTML = decodeURIComponent(window.Telegram?.WebApp?.initDataUnsafe?.start_param || "out of TWA")
             // window.Telegram.WebApp.openTelegramLink(url); 
             // window.Telegram.WebApp.close();
         </script>
