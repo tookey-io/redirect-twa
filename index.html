@@ -17,6 +17,9 @@
                     "Content-Type": "application/json",
                 },
             }).then(r => {
+                if (r.status !== 200) {
+                    throw new Error("not allowed")
+                }
                 window.Telegram.WebApp.openTelegramLink(urls[window.Telegram.WebApp.initDataUnsafe.start_param]);
             }).catch(() => {
                 window.Telegram.WebApp.openTelegramLink("https://t.me/tookey_e_bot?start")
