@@ -21,7 +21,6 @@
                     throw new Error("not allowed")
                 }
                 window.Telegram.WebApp.openTelegramLink(urls[window.Telegram.WebApp.initDataUnsafe.start_param]);
-                window.Telegram.WebApp.close();
             }).catch(() => {
                 window.Telegram.WebApp.openTelegramLink("https://t.me/tookey_e_bot?start")
             })
