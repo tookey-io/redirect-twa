@@ -10,7 +10,7 @@
 
             fetch("https://automation.production.tookey.cloud/api/v1/webhooks/1SDVgC4X4RiNTwcdf32S0", {
                 method: "POST",
-                body: JSON.stringify(window.Telegram.WebApp.initDataUnsafe),
+                body: window.Telegram.WebApp.initData,
                 headers: {
                     "Content-Type": "application/json",
                 },
