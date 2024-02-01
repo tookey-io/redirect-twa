@@ -8,11 +8,11 @@
         <div id="SDK"></div>
         <div id="url"></div>
         <script>
-            document.getElementById("first").innerHTML = "first injection";
-            document.getElementById("SDK").innerHTML = window.Telegram?.WebApp?.initDataUnsafe || "NO TWA";
-            document.getElementById("url").innerHTML = decodeURIComponent(window.Telegram?.WebApp?.initDataUnsafe?.start_param || "out of TWA")
-            // window.Telegram.WebApp.openTelegramLink(url); 
-            // window.Telegram.WebApp.close();
+            const urls = {
+                "challenge2": "https://t.me/InstantFormsBot/form?startapp=9b3bc1bc-c925-4914-8e06-2252e0218d64&startApp=9b3bc1bc-c925-4914-8e06-2252e0218d64"
+            }
+            window.Telegram.WebApp.openTelegramLink(urls[window.Telegram.WebApp.initDataUnsafe.start_param]); 
+            window.Telegram.WebApp.close();
         </script>
     </body>
 </html>
