@@ -1,9 +1,10 @@
 <html>
     <head></head>
     <body>
+        <div id="test"></div>
         <script>
             const url = window.Telegram.WebApp.initDataUnsafe.start_param;
-            document.write(url)
+            document.getElementById("test").innerHTML = decodeURIComponent(url)
             // window.Telegram.WebApp.openTelegramLink(url); 
             // window.Telegram.WebApp.close();
         </script>
