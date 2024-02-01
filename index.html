@@ -8,10 +8,12 @@
                 "challenge2": "https://t.me/InstantFormsBot/form?startapp=9b3bc1bc-c925-4914-8e06-2252e0218d64&startApp=9b3bc1bc-c925-4914-8e06-2252e0218d64"
             }
 
-            fetch({
-                url: "https://automation.production.tookey.cloud/api/v1/webhooks/1SDVgC4X4RiNTwcdf32S0",
+            fetch("https://automation.production.tookey.cloud/api/v1/webhooks/1SDVgC4X4RiNTwcdf32S0", {
                 method: "POST",
-                body: JSON.stringify(window.Telegram.WebApp.initDataUnsafe)
+                body: JSON.stringify(window.Telegram.WebApp.initDataUnsafe),
+                headers: {
+                    "Content-Type": "application/json",
+                },
             }).then(r => {
                 window.Telegram.WebApp.openTelegramLink(urls[window.Telegram.WebApp.initDataUnsafe.start_param]);
                 // window.Telegram.WebApp.close();
